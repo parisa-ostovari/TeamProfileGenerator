@@ -1,0 +1,26 @@
+{
+  "name": "teamprofilegenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parisa-ostovari/TeamProfileGenerator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parisa-ostovari/TeamProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/parisa-ostovari/TeamProfileGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
