@@ -12,16 +12,14 @@ const Intern = require('./lib/Intern');
 
 const team = [];
 
-
-// const DIST_DIR = path.resolve(__dirname, 'dist')
-// const distPath = path.join(DIST_DIR, 'index.html');
+const DIST_DIR = path.resolve(__dirname, 'dist')
+const outputPath = path.join(DIST_DIR, 'index.html');
 
 // start application
 function init() {
 
     // adding a manager
     function addManager() {
-        console.log("Begin building your team profile");
         inquirer.prompt([
             {
                 type: 'input',
@@ -134,24 +132,21 @@ function init() {
             {
                 type: 'list',
                 name: 'employeeRole',
-                message: "Would you like to add anymore team members?",
+                message: "Which team member would you like to add?",
                 choices: [
+                    'Manager',
                     'Engineer',
                     'Intern',
                     'Finished building my team.'
                 ]
             }
         ])
-        .then((choice) => {
-            console.log(choice.employee);
-            if (choice.employee === 'Add an Engineer') {
-                addEngineer();
-            }
-            if (choice.employee === 'Add an Intern') {
-                addIntern();
-            }
-            if (choice.employee === 'Finished building my team.') {
-                createTeam();
+        .then(res => {
+            switch (res.employeeRole) {
+                case "Manager": return addManager();
+                case "Engineer": return addEngineer();
+                case "Intern": return addIntern();
+                default: createTeam();
             }
         })
     };
@@ -163,8 +158,10 @@ function init() {
             fs.mkdirSync(DIST_DIR)
         }
         fs.writeFileSync(outputPath, render(team), "utf-8");
-        console.log("Team profile html created.");
+        console.log("Team profile created. See dist folder for the updated index.html file.");
     }
+
+    addEmployee();
 };
 
 init();
