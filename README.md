@@ -40,3 +40,12 @@ First git clone the repo to your local device. Install node.js, inquirer, and je
 
 ## Usage
 Begin with installing the inquirer and jest packages by way of ‘npm install’. After installation, initialize the questions by inputting ‘node index.js’. Once the prompts are answered a new index.html file will be created within the dist folder.
+
+## Link to GitHub Repository
+
+https://github.com/parisa-ostovari/TeamProfileGenerator
+
+## Screenshot
+Here is an example of how the deployed index.html file could look like:
+ 
+![alt="Team Profile Generator Screenshot"](./dist/SampleHTMLScreenshot.png)
