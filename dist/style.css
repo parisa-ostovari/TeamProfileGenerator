@@ -1,0 +1,44 @@
+body {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.jumbotron {
+background-color: #1d6477;
+}
+
+a {
+color: #2d7f96;
+text-decoration: none;
+}
+
+a:hover {
+color: #0090e4;
+text-decoration: none;
+}
+
+.main-section {
+flex-wrap: wrap;
+}
+
+.employee-card {
+display: flex;
+justify-content: center;
+margin: 20px;
+width: 100%;
+max-width: 320px;
+color: white;
+box-shadow: 2px 2px 4px rgb(31, 31, 31);
+border: none;
+}
+
+.manager-card {
+background-color: #2c2161;
+}
+
+.engineer-card {
+background-color: #3f4ea1;
+}
+
+.intern-card {
+background-color: #64a4b8;
+}
